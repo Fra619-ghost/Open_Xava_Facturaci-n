@@ -15,4 +15,8 @@ public class Cliente {
     @Required  // Se mostrará un error de validación si la propiedad nombre se deja en blanco
     String nombre;
 
+    @Embedded // Así para referenciar a una clase incrustable
+    Direccion direccion; // Una referencia Java convencional
+
+
 }
