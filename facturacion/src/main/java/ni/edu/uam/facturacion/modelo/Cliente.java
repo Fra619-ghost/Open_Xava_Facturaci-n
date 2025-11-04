@@ -3,6 +3,13 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import lombok.*;
 
+
+@View(name="Simple", // Esta vista solo se usará cuando se especifique ?Simple?
+        members="numero, nombre" // Muestra únicamente numero y nombre en la misma línea
+)
+
+
+
 @Entity  // Esto marca la clase Cliente como una entidad
 @Getter @Setter // Esto hace los campos a continuación públicamente accesibles
 public class Cliente {

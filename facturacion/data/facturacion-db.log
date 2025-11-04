@@ -1,13 +1,2 @@
-/*C4*/SET SCHEMA PUBLIC
+/*C3*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C5*/SET SCHEMA PUBLIC
-create table Categoria (oid varchar(32) not null, descripcion varchar(50), primary key (oid))
-alter table Cliente add column codigoPostal integer
-alter table Cliente add column municipio varchar(20)
-alter table Cliente add column provincia varchar(30)
-alter table Cliente add column viaPublica varchar(30)
-alter table Producto add column fotos varchar(32)
-alter table Producto add column observaciones varchar(255)
-alter table Producto add column precio numeric(19,2)
-alter table Producto add column categoria_oid varchar(32)
-alter table Producto add constraint FKc81rcy0vfdn5ewnap5scabhd3 foreign key (categoria_oid) references Categoria
