@@ -2,10 +2,9 @@ package ni.edu.uam.facturacion.calculadores;
 
 import javax.persistence.*;
 
-import org.openxava.annotations.DefaultValueCalculator;
-import org.openxava.annotations.PropertyValue;
 import org.openxava.calculators.*;
 import org.openxava.jpa.*;
+
 import lombok.*;
 
 public class CalculadorSiguienteNumeroParaAnyo
@@ -23,13 +22,5 @@ public class CalculadorSiguienteNumeroParaAnyo
         return ultimoNumero == null ? 1 : ultimoNumero + 1; // Devuelve el último número
         // de factura del año + 1 o 1 si no hay último número
     }
-
-    @DefaultValueCalculator(value=CalculadorSiguienteNumeroParaAnyo.class,
-            properties=@PropertyValue(name="anyo") // Para inyectar el valor de anyo de Factura
-            // en el calculador antes de llamar a calculate()
-    )
-    int numero;
-
-
 
 }

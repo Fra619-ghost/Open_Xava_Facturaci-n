@@ -1,6 +1,7 @@
 package ni.edu.uam.facturacion.modelo;
 
 import javax.persistence.*;
+
 import lombok.*;
 
 @Embeddable @Getter @Setter
